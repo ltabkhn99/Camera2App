@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/recordIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:src="@drawable/rec_button" />
+
+        <TextView
+            android:id="@+id/txtIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:text="@string/run_time"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <com.example.camera2app.AutoFitTextureView
+        android:id="@+id/surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/control"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/control"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:background="@color/black">
+
+        <ImageButton
+            android:id="@+id/galleryButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_vertical|left"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/gallery"
+            tools:ignore="RtlHardcoded" />
+        <ImageButton
+            android:id="@+id/ic_pause"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_vertical|left"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/ic_pause"
+            tools:ignore="RtlHardcoded" />
+
+        <ImageButton
+            android:id="@+id/recordButton"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_record" />
+        <ImageButton
+            android:id="@+id/stopButton"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_gravity="center"
+            android:background="@drawable/stop" />
+
+        <ImageButton
+            android:id="@+id/switchCameraButton"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/round_button"
+            android:padding="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/switch_cam"
+            tools:ignore="RtlHardcoded" />
+
+        <!--        <ImageButton-->
+        <!--            android:id="@+id/flashButton"-->
+        <!--            android:layout_width="40dp"-->
+        <!--            android:layout_height="40dp"-->
+        <!--            android:src="@drawable/ic_flash_off"-->
+        <!--            android:layout_gravity="center_vertical|right"-->
+        <!--            android:background="@null"-->
+        <!--            android:scaleType="centerInside"/>-->
+    </FrameLayout>
+    <!-- Button to switch between front and back cameras -->
+
+
+</RelativeLayout>
